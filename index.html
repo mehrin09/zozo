@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative CRM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #ddd;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Collaborative CRM</h1>
+    </header>
+
+    <nav>
+        <button onclick="showCustomerData()">Customer Data</button>
+        <button onclick="showSalesAutomation()">Sales Automation</button>
+        <button onclick="showMarketingAutomation()">Marketing Automation</button>
+        <button onclick="showCustomerService()">Customer Service</button>
+    </nav>
+
+    <section id="customerData">
+        <h2>Customer Data Module</h2>
+        <!-- Add your customer data content here -->
+    </section>
+
+    <section id="salesAutomation" style="display: none;">
+        <h2>Sales Automation Module</h2>
+        <!-- Add your sales automation content here -->
+    </section>
+
+    <section id="marketingAutomation" style="display: none;">
+        <h2>Marketing Automation Module</h2>
+        <!-- Add your marketing automation content here -->
+    </section>
+
+    <section id="customerService" style="display: none;">
+        <h2>Customer Service Module</h2>
+        <!-- Add your customer service content here -->
+    </section>
+
+    <footer>
+        &copy; 2023 Collaborative CRM. All rights reserved.
+    </footer>
+
+    <script>
+        function showCustomerData() {
+            hideAllSections();
+            document.getElementById('customerData').style.display = 'block';
+        }
+
+        function showSalesAutomation() {
+            hideAllSections();
+            document.getElementById('salesAutomation').style.display = 'block';
+        }
+
+        function showMarketingAutomation() {
+            hideAllSections();
+            document.getElementById('marketingAutomation').style.display = 'block';
+        }
+
+        function showCustomerService() {
+            hideAllSections();
+            document.getElementById('customerService').style.display = 'block';
+        }
+
+        function hideAllSections() {
+            document.getElementById('customerData').style.display = 'none';
+            document.getElementById('salesAutomation').style.display = 'none';
+            document.getElementById('marketingAutomation').style.display = 'none';
+            document.getElementById('customerService').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
